@@ -60,21 +60,21 @@ class Vnshipping_Admin
     {
         add_menu_page(
             "Shipping Options",
-            "Shipping Wordpres",
+            "Бланк закупа",
             "manage_options",
             "shipping_options",
             array($this, 'render'),
             "dashicons-cart",
             25
         );
-        add_submenu_page(
-            "shipping_options",
-            "submenu Shipping Wordpres",
-            "submenu Shipping",
-            "manage_options",
-            "shipping_options_sub",
-            array($this, 'render1')
-        );
+        // add_submenu_page(
+        //     "shipping_options",
+        //     "submenu Shipping Wordpres",
+        //     "submenu Shipping",
+        //     "manage_options",
+        //     "shipping_options_sub",
+        //     array($this, 'render1')
+        // );
     }
 
     public function render()

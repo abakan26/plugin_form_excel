@@ -38,14 +38,4 @@
     </div>
 <?php
 
-function vardump($var)
-{
-    echo "<hr>";
-    echo '<pre>';
-    var_dump($var);
-    echo '</pre>';
-    echo "<hr>";
-}
-
-
 ?>

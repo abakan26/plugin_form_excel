@@ -11,7 +11,7 @@ class SHExcel
     }
     public function view($data)
     {
-        $this->get_header();
+        $this->get_header(5, date("d.m.Y"));
         $this->get_table($data);
 
     }
@@ -94,12 +94,11 @@ class SHExcel
         $objWriter->save($path); //plugin_dir_path(dirname(__FILE__)) . "/admin/partials/file.xlsx"
     }
 
-    public function get_header()
+    public function get_header($number, $date)
     {
         $this->get_logo(plugin_dir_path(dirname(__FILE__)) . "/admin/partials/logo.png", "A1");
         $this->list->mergeCells("B6:F6");
-        $number = 5;
-        $date = "06.11.2019";
+        
         $this->list->setCellValue("B6", "БЛАНК ЗАКУПА №{$number}-{$date}");
         $this->list->getStyle("B6")->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 

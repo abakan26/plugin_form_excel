@@ -26,8 +26,7 @@ class WPShippingCustom
         $data = $this->get_orders($wpdb, $date_start, $date_end);
         $b = new SHExcel($data);
         $b->save('php://output');
-        global $wpdb;
-       $data = $this->get_orders($wpdb, $date_start, $date_end);
+        
 
     }
 
