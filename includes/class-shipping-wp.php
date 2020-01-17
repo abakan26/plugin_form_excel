@@ -9,8 +9,25 @@ class WPShippingCustom
 
     }
 
-    public function shipping()
+    public function shipping($date_start, $date_end)
     {
+        // Выводим HTTP-заголовки
+        header ( "Expires: Mon, 1 Apr 1974 05:00:00 GMT" );
+        header ( "Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT" );
+        header ( "Cache-Control: no-cache, must-revalidate" );
+        header ( "Pragma: no-cache" );
+        header ( "Content-type: application/vnd.ms-excel" );
+        header ( "Content-Disposition: attachment; filename=file.xlsx" );
+
+        // Выводим содержимое файла
+//        $objWriter = new PHPExcel_Writer_Excel5($xls);
+//        $objWriter->save('php://output');
+        global $wpdb;
+        $data = $this->get_orders($wpdb, $date_start, $date_end);
+        $b = new SHExcel($data);
+        $b->save('php://output');
+        global $wpdb;
+       $data = $this->get_orders($wpdb, $date_start, $date_end);
 
     }
 
@@ -62,7 +79,7 @@ class WPShippingCustom
         $quantity = array_reduce(
             $order_item,
             function ($carry, $item) {
-                $carry += (int)$item->quantity;
+                $carry += (float)$item->quantity;
                 return $carry;
             }
         );
@@ -80,9 +97,13 @@ class WPShippingCustom
 
     private function mergeOrderByProductID($groupedOrderByProductID)
     {
+
+
         $mergedOrderByProductID = array();
         $mergedOrderByProductID = array_map(
+
             function ($order_item) {
+
                 $quantity = $this->sum_order_item_quantity($order_item);
                 $order_item[0]->quantity = $quantity;
                 return $order_item[0];
@@ -97,8 +118,31 @@ class WPShippingCustom
     {
         $no_group_orders = $this->get_no_group_orders($wpdb, $start, $end);
         $groupedOrderByProductID = $this->groupOrderByProductID($no_group_orders);
-        return $this->mergeOrderByProductID($groupedOrderByProductID);
+        $data = $this->mergeOrderByProductID($groupedOrderByProductID);
+        foreach ($data as $row) {
+            if ($row->productunit === "кг") {
+
+                $quantity = (float)$row->quantity;
+                $one_weight = (float)$row->weight;
+                $weight = $quantity * $one_weight;
+                $row->quantity = $weight;
+
+            }
+        }
+        return $data;
     }
 
 
 }
+
+/**
+ * object(stdClass)#15932 (6) {
+ * ["product_name"] =>  string(12) "Бананы"
+ * ["product_id"]   =>  string(3) "272"
+ * ["price"]        =>  string(3) "160"
+ * ["productunit"]  =>  string(4) "шт"
+ * ["weight"]       =>  string(3) "0.2"
+ * ["quantity"]     =>  string(1) "3"
+ * }
+ *
+ */

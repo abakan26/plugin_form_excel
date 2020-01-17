@@ -118,6 +118,7 @@ class Vnshipping
          * The class responsible for defining all actions that occur in the admin area.
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-vnshipping-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-shipping-excel.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/PHPExcel-1.8/Classes/PHPExcel.php';
 
         /**
@@ -198,13 +199,16 @@ class Vnshipping
     public function postProcess($post)
     {
         if (isset($post["action"]) && $post["action"] === "shipping") {
-            $this -> shipping();
+            $date_start = "{$post['date_start']} {$post['time_start']}:00";
+            $date_end = "{$post['date_end']} {$post['time_end']}:59";
+            $this -> shipping($date_start, $date_end);
         }
     }
-    public function shipping()
+    public function shipping($date_start, $date_end)
     {
+
         $obj = new WPShippingCustom();
-        $obj ->shipping();
+        $obj ->shipping($date_start, $date_end);
     }
 
     /**
