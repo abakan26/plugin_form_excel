@@ -2,10 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aea7b67-0609-4298-b77d-fd5a8dd2376e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/partials/file.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/partials/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vnshipping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vnshipping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/class-vnshipping-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/class-vnshipping-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/css/vnshipping-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/css/vnshipping-admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/js/vnshipping-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/js/vnshipping-admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/partials/vnshipping-admin-display.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/partials/vnshipping-admin-display.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/PHPExcel-1.8/Classes/PHPExcel/Cell.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/PHPExcel-1.8/Classes/PHPExcel/Cell.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/class-shipping-wp.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-shipping-wp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-vnshipping-activator.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-vnshipping-activator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-vnshipping-deactivator.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-vnshipping-deactivator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-vnshipping-i18n.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-vnshipping-i18n.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-vnshipping-loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-vnshipping-loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-vnshipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-vnshipping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/vnshipping.pot" beforeDir="false" afterPath="$PROJECT_DIR$/languages/vnshipping.pot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/class-vnshipping-public.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/class-vnshipping-public.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/vnshipping-public.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/vnshipping-public.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/vnshipping-public.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vnshipping-public.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/partials/vnshipping-public-display.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/partials/vnshipping-public-display.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uninstall.php" beforeDir="false" afterPath="$PROJECT_DIR$/uninstall.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vnshipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/vnshipping.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +48,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WRg7UW0DnHQc5hUdsYNZglJCky" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -59,11 +89,15 @@
       <workItem from="1579117657527" duration="5173000" />
       <workItem from="1579139829680" duration="10272000" />
       <workItem from="1579164806469" duration="11206000" />
+      <workItem from="1579229067803" duration="15447000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1199" y="364" width="375" height="143" key="#WordPress" timestamp="1579117672115">
@@ -74,6 +108,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="587" y="357" width="476" height="723" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579121107948" />
+    <state x="952" y="281" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579229063260">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="952" y="281" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1579229063260" />
     <state x="1047" y="282" key="NewPhpClassDialog" timestamp="1579120970149">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -90,8 +128,31 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="888" y="167" width="662" height="735" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579165656426" />
+    <state x="1173" y="228" key="run.anything.popup" timestamp="1579245691249">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="1173" y="228" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579245691249" />
+    <state x="999" y="373" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579241787864">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="999" y="373" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579241787864" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$/../../..</wordpressPath>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/includes/class-shipping-wp.php</url>
+          <line>16</line>
+          <properties>
+            <option name="className" value="\WPShippingCustom" />
+            <option name="methodName" value="get_orders" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

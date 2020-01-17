@@ -118,6 +118,7 @@ class Vnshipping
          * The class responsible for defining all actions that occur in the admin area.
          */
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-vnshipping-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/PHPExcel-1.8/Classes/PHPExcel.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
