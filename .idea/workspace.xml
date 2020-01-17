@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aea7b67-0609-4298-b77d-fd5a8dd2376e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/partials/vnshipping-admin-display.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/partials/vnshipping-admin-display.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-shipping-wp.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-shipping-wp.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,8 @@
       <updated>1579117653687</updated>
       <workItem from="1579117657527" duration="5173000" />
       <workItem from="1579139829680" duration="10272000" />
-      <workItem from="1579164806469" duration="11206000" />
+      <workItem from="1579164806469" duration="11446000" />
+      <workItem from="1579255426967" duration="104000" />
     </task>
     <servers />
   </component>
@@ -70,6 +69,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="1199" y="364" width="375" height="143" key="#WordPress/67.27.1853.1053@67.27.1853.1053" timestamp="1579117672115" />
+    <state x="800" y="289" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579255472156">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="800" y="289" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579255472156" />
     <state x="587" y="357" width="476" height="723" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579121107948">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -82,10 +85,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="881" y="71" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1579117688571" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579141781806">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579255426197">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579141781806" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579255426197" />
     <state x="888" y="167" width="662" height="735" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579165656426">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
