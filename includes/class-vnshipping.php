@@ -191,9 +191,13 @@ class Vnshipping
     public function run()
     {
         $this->loader->run();
+        add_action("wp_ajax_vn_get_order", array($this, 'vn_get_order'));
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $this->postProcess($_POST);
         }
+        // if ($_SERVER['REQUEST_METHOD'] === "GET") {
+        //     $this->getProcess($_GET);
+        // }
     }
 
     public function postProcess($post)
@@ -204,11 +208,24 @@ class Vnshipping
             $this -> shipping($date_start, $date_end);
         }
     }
+    // public function getProcess($get)
+    // {
+    //     if (isset($post["action"]) && $post["action"] === "shipping") {
+    //         echo $get;
+    //     }
+    // }
     public function shipping($date_start, $date_end)
     {
 
         $obj = new WPShippingCustom();
         $obj ->shipping($date_start, $date_end);
+
+    }
+    public function vn_get_order()
+    {        
+        
+        $obj = new WPShippingCustom();
+        $obj -> get_order_in_excel($_GET['order_id']);   
     }
 
     /**

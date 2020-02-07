@@ -12,12 +12,7 @@ class WPShippingCustom
     public function shipping($date_start, $date_end)
     {
         // Выводим HTTP-заголовки
-        header ( "Expires: Mon, 1 Apr 1974 05:00:00 GMT" );
-        header ( "Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT" );
-        header ( "Cache-Control: no-cache, must-revalidate" );
-        header ( "Pragma: no-cache" );
-        header ( "Content-type: application/vnd.ms-excel" );
-        header ( "Content-Disposition: attachment; filename=file.xlsx" );
+        $this->get_headers();
 
         // Выводим содержимое файла
 //        $objWriter = new PHPExcel_Writer_Excel5($xls);
@@ -25,11 +20,60 @@ class WPShippingCustom
         global $wpdb;
         $data = $this->get_orders($wpdb, $date_start, $date_end);
         $b = new SHExcel($data);
+        $b->view_all();
         $b->save('php://output');
         
 
     }
+    public function get_order_in_excel($order_id)
+    {
+        $data = $this->get_order_formated($order_id);
+        $this->get_headers();
+        $b = new SHExcel($data);
+        $b->view_one();
+        $b->save('php://output');
+    }
+    private function get_headers()
+    {
+        header ( "Expires: Mon, 1 Apr 1974 05:00:00 GMT" );
+        header ( "Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT" );
+        header ( "Cache-Control: no-cache, must-revalidate" );
+        header ( "Pragma: no-cache" );
+        header ( "Content-type: application/vnd.ms-excel" );
+        header ( "Content-Disposition: attachment; filename=file.xlsx" );
+    }
+    private function get_order_formated($order_id)
+    {
 
+        $data = array();
+        $products = array();
+        $dop = "Позаботьтесь о времени близких. Попросите позвонить к нам и мы сформируем, упакуем и доставим посылку  Вам в самые кратчайшие сроки. Так же в наличии таксофонные смарт карты и Тарлан карты любого номинала. 87058085626 (WhatsApp)";
+        $order = wc_get_order( $order_id );
+        $date = $order->get_data()["date_created"]->date("d/m/Y");
+        $otpravitel = $order->get_billing_first_name();
+        $phone = $order->get_billing_phone();
+        $poluchatel = $order->get_shipping_first_name();
+        $products_order = $order->get_items( 'line_item' );
+        $adress = $order->get_shipping_state();
+
+        
+        foreach ($products_order as $key => $value) {
+            $products[] = array(
+             "product_name" => $value->get_name(),
+             "quantity" => $value->get_quantity(),
+             "productunit" => $value->get_product()->get_meta("_productunit")
+            ); 
+        };
+        return array(
+            "date"          => $date,
+            "otpravitel"    => $otpravitel,
+            "phone"         => $phone,
+            "poluchatel"    => $poluchatel,
+            "adress"        => $adress,
+            "products"      => $products,
+            "dop"           => $dop
+        );
+    }
     private function get_no_group_orders($wpdb, $start, $end)
     {
         $orders = $wpdb->prepare(

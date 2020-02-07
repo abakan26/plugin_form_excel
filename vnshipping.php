@@ -82,3 +82,40 @@ function run_vnshipping() {
 }
 //run_vnshipping();
 add_action("init", "run_vnshipping");
+
+
+
+
+add_action( 'manage_shop_order_posts_custom_column' , 'custom_book_column', 10, 2 );
+
+function custom_book_column($column, $post_id)
+{
+	 if ( $column == 'download' ) {    
+        //var_dump($post_id);
+        $href =  add_query_arg( array('action' => 'vn_get_order', 'order_id' => $post_id ), admin_url('admin-ajax.php') );
+        echo "
+        	<a class='excel_order' href=$href target='_blank'>
+        		Скачать в excel
+        	</a>
+        ";
+    }
+}
+
+add_filter( 'manage_edit-shop_order_columns', 'MY_COLUMNS_FUNCTION' );
+function MY_COLUMNS_FUNCTION($columns){
+
+    $new =  array(
+    	'order_number' => $columns['order_number'],
+    	'download' => '',
+    	'order_date' => $columns['order_date'],
+		'order_status' =>  $columns['order_status'],
+		'order_total' => $columns['order_total'],
+    );
+    unset($columns['order_number']);
+	unset($columns['order_date']);
+	unset($columns['order_status']);
+	unset($columns['order_total']);
+
+    return array_merge($columns, $new);
+}
+

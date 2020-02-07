@@ -1,6 +1,28 @@
 (function( $ ) {
 	'use strict';
+	// $(document).on('click', '.excel_order', function (e) {                
+ //     //wc_orders_params.ajax_url;   
+        
+ //        $.ajax(
+ //            {
+ //                url: wc_orders_params.ajax_url,
+ //                type: "post",
+ //                data: {
+ //                    action: "vn_get_order"
+ //                },                       
+	// 			dataType: 'html',
+ //                success: function (url) {
+ //           //          var link = document.createElement('a');
+	// 		        // link.setAttribute('href', url);
+	// 		        // link.setAttribute('download','download');
+	// 		        // link.click();
+	// 		        console.log(url)
+ //                }
 
+ //            }
+ //        );
+
+ //    })
 	/**
 	 * All of the code for your admin-facing JavaScript source
 	 * should reside in this file.
